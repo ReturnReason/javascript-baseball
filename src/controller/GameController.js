@@ -11,7 +11,12 @@ class GameController {
   }
 
   start() {
+    const userInput = (input) => {
+      console.log(input);
+    };
+
     this.#outputView.printStart();
+    this.#inputView.readNumber(userInput);
   }
 }
 
