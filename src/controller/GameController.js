@@ -1,3 +1,4 @@
+const Validator = require('../validate/Validator');
 const InputView = require('../view/InputView');
 const OutputView = require('../view/OutputView');
 
@@ -8,11 +9,12 @@ class GameController {
   constructor() {
     this.#inputView = new InputView();
     this.#outputView = new OutputView();
+    this.validator = new Validator();
   }
 
   start() {
     const userInput = (input) => {
-      console.log(input);
+      this.validator.checkNumber(input);
     };
 
     this.#outputView.printStart();
