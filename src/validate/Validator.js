@@ -5,7 +5,7 @@ class Validator {
   checkNumber(input) {
     const { notNumber } = INVALID_INPUT_MESSAGE;
     const isNaN = Number.isNaN(Number(input));
-    if (isNaN) {
+    if (isNaN || input.includes('.')) {
       throw notNumber;
     }
   }
