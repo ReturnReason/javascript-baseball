@@ -16,6 +16,7 @@ class GameController {
     const userInput = (input) => {
       this.validator.checkNumber(input);
       this.validator.checkLength(input);
+      this.validator.checkDuplication(input);
     };
 
     this.#outputView.printStart();

@@ -8,6 +8,7 @@ class Validator {
     if (isNaN || input.includes('.')) {
       throw notNumber;
     }
+    return true;
   }
 
   checkLength(input) {
@@ -15,6 +16,16 @@ class Validator {
     if (input.length !== LENGTH) {
       throw count;
     }
+    return true;
+  }
+
+  checkDuplication(input) {
+    const inputNumberLength = [...new Set(input.split(''))].length;
+    const { duplication } = INVALID_INPUT_MESSAGE;
+    if (inputNumberLength !== LENGTH) {
+      throw duplication;
+    }
+    return true;
   }
 }
 
