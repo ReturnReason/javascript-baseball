@@ -2,6 +2,12 @@ const { INVALID_INPUT_MESSAGE } = require('../constant/messages');
 const { LENGTH } = require('../constant/baseball');
 
 class Validator {
+  validCheckBundle(input) {
+    this.checkNumber(input);
+    this.checkLength(input);
+    this.checkDuplication(input);
+  }
+
   checkNumber(input) {
     const { notNumber } = INVALID_INPUT_MESSAGE;
     const isNaN = Number.isNaN(Number(input));
