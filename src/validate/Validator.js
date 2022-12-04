@@ -1,5 +1,5 @@
 const { INVALID_INPUT_MESSAGE } = require('../constant/messages');
-const { LENGTH } = require('../constant/baseball');
+const { LENGTH, COMMAND } = require('../constant/baseball');
 
 class Validator {
   validCheckBundle(input) {
@@ -30,6 +30,15 @@ class Validator {
     const { duplication } = INVALID_INPUT_MESSAGE;
     if (inputNumberLength !== LENGTH) {
       throw duplication;
+    }
+    return true;
+  }
+
+  checkCommand(input) {
+    const { restart, quit } = COMMAND;
+    const { invalidCommand } = INVALID_INPUT_MESSAGE;
+    if (!input === restart && !input === quit) {
+      throw invalidCommand;
     }
     return true;
   }
