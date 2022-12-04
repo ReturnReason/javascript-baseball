@@ -23,6 +23,10 @@ class OutputView {
     const { end } = PRINT_MESSAGE;
     print(end);
   }
+
+  quit() {
+    close();
+  }
 }
 
 module.exports = OutputView;
