@@ -18,6 +18,11 @@ class OutputView {
 
     return print(`${ballCount}${ball} ${strikeCount}${strike}`);
   }
+
+  printEndGame() {
+    const { end } = PRINT_MESSAGE;
+    print(end);
+  }
 }
 
 module.exports = OutputView;
