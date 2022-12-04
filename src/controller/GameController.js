@@ -15,6 +15,7 @@ class GameController {
   start() {
     const userInput = (input) => {
       this.validator.checkNumber(input);
+      this.validator.checkLength(input);
     };
 
     this.#outputView.printStart();
