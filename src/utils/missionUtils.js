@@ -1,5 +1,4 @@
 const { Console, Random } = require('@woowacourse/mission-utils');
-const { pickNumberInRange } = Random;
 
 const print = (message) => {
   return Console.print(message);
@@ -13,8 +12,12 @@ const close = () => {
   return Console.close();
 };
 
+const pickNumber = (start, end) => {
+  return Random.pickNumberInRange(start, end);
+};
+
 module.exports = {
-  pickNumberInRange,
+  pickNumber,
   print,
   readLine,
   close,
