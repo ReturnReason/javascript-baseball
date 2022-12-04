@@ -20,6 +20,10 @@ class Computer {
 
     return [...pickedNumbers];
   }
+
+  getGameNumbers() {
+    return this.#gameNumbers;
+  }
 }
 
 module.exports = Computer;
