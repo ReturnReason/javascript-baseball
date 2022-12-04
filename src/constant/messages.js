@@ -7,7 +7,7 @@ const PRINT_MESSAGE = Object.freeze({
   strike: '스트라이크',
   nothing: '낫싱',
   end: '3개의 숫자를 모두 맞히셨습니다! 게임 종료',
-  restart: `게임을 새로 시작하려면 ${COMMAND.restart}, 종료하려면 ${COMMAND.quit}를 입력하세요.`,
+  restart: `게임을 새로 시작하려면 ${COMMAND.restart}, 종료하려면 ${COMMAND.quit}를 입력하세요.\n`,
 });
 
 const INVALID_INPUT_MESSAGE = Object.freeze({
