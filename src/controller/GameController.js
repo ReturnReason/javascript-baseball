@@ -40,13 +40,15 @@ class GameController {
     const ball = this.#baseballGame.countBall(computerNumbers, userInput);
 
     this.#outputView.printStrikeBall(strike, ball);
+
     if (strike === THREE_STRIKE) this.askRestartGame();
   }
 
   askRestartGame() {
     const { restart, quit } = COMMAND;
-    // 1, 2가 아닌 값 입력하면 예외처리
+
     const userInput = (input) => {
+      this.validator.checkCommand(Number(input));
       if (Number(input) === restart) {
         this.start();
       }
@@ -54,6 +56,7 @@ class GameController {
         this.#outputView.quit();
       }
     };
+
     this.#inputView.readRestartGame(userInput);
   }
 }
