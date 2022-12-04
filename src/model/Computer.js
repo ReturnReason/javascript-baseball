@@ -4,7 +4,7 @@ const { START_NUM, END_NUM, LENGTH } = require('../constant/baseball');
 class Computer {
   #gameNumbers;
 
-  constructor() {
+  initGameNumbers() {
     this.#gameNumbers = this.makeGameNumbers();
   }
 
