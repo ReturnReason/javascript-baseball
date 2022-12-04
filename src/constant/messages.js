@@ -17,7 +17,7 @@ const INVALID_INPUT_MESSAGE = Object.freeze({
   notNumber: '숫자가 아닌 값은 입력할 수 없습니다. 게임 종료!',
   empty: '공백은 입력할 수 없습니다. 게임 종료!',
   duplicate: '중복되는 숫자가 포함되어 있습니다. 게임 종료!',
-  range: '숫자는 3개 입력해야 합니다. (3개 미만 또는 초과) 게임 종료!',
+  count: '3개의 숫자를 입력해주세요. (3개 미만 또는 초과) 게임 종료!',
 });
 
 module.exports = { PRINT_MESSAGE, INVALID_INPUT_MESSAGE };
