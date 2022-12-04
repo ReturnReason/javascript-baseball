@@ -15,6 +15,7 @@ const INVALID_INPUT_MESSAGE = Object.freeze({
   empty: '공백은 입력할 수 없습니다. 게임 종료!',
   duplication: '중복되는 숫자가 포함되어 있습니다. 게임 종료!',
   count: '3개의 숫자를 입력해주세요. (3개 미만 또는 초과) 게임 종료!',
+  invalidCommand: `(잘못된 입력) ${COMMAND.restart} 또는 ${COMMAND.quit}만 입력할 수 있습니다. 게임 종료!`,
 });
 
 module.exports = { PRINT_MESSAGE, INVALID_INPUT_MESSAGE };
