@@ -23,7 +23,7 @@ class GameController {
   start() {
     const userInput = (input) => {
       this.validator.validCheckBundle(input);
-      this.compare(input);
+      this.compare(input.split('').map(Number));
     };
 
     this.#outputView.printStart();
