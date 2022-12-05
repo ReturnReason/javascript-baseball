@@ -49,4 +49,16 @@ describe('✅ Validator 클래스 테스트', () => {
       });
     }).toThrow(duplication);
   });
+
+  test('checkCommand 메서드 테스트 : 인풋 값 커맨드가 1또는 2가 아닌 경우 예외처리한다.', () => {
+    const validator = new Validator();
+    const inputs = ['3', ' ', 'test', '', '1.', '2 ', ' 1'];
+    const { invalidCommand } = INVALID_INPUT_MESSAGE;
+
+    expect(() => {
+      inputs.map(Number).forEach((input) => {
+        validator.checkCommand(input);
+      });
+    }).toThrow(invalidCommand);
+  });
 });
