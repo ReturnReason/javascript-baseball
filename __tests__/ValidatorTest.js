@@ -37,4 +37,16 @@ describe('✅ Validator 클래스 테스트', () => {
       });
     }).toThrow(outOfRange);
   });
+
+  test('checkDuplication 메서드 테스트 : 인풋 값에 중복된 숫자가 있는 경우 예외처리한다.', () => {
+    const validator = new Validator();
+    const inputs = ['112', '919', '444'];
+    const { duplication } = INVALID_INPUT_MESSAGE;
+
+    expect(() => {
+      inputs.forEach((input) => {
+        validator.checkDuplication(input);
+      });
+    }).toThrow(duplication);
+  });
 });
