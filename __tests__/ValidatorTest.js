@@ -25,4 +25,16 @@ describe('✅ Validator 클래스 테스트', () => {
       });
     }).toThrow(count);
   });
+
+  test('checkRange 메서드 테스트 : 인풋 값에 0이 포함되어 있는 경우 예외처리한다.', () => {
+    const validator = new Validator();
+    const inputs = ['104', '096', '450'];
+    const { outOfRange } = INVALID_INPUT_MESSAGE;
+
+    expect(() => {
+      inputs.forEach((input) => {
+        validator.checkRange(input);
+      });
+    }).toThrow(outOfRange);
+  });
 });
