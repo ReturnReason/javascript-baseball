@@ -11,6 +11,7 @@ const PRINT_MESSAGE = Object.freeze({
 });
 
 const INVALID_INPUT_MESSAGE = Object.freeze({
+  outOfRange: '0은 입력할 수 없습니다. 게임 종료!',
   notNumber: '숫자가 아닌 값은 입력할 수 없습니다. 게임 종료!',
   empty: '공백은 입력할 수 없습니다. 게임 종료!',
   duplication: '중복되는 숫자가 포함되어 있습니다. 게임 종료!',
