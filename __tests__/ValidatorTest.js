@@ -13,4 +13,16 @@ describe('✅ Validator 클래스 테스트', () => {
       });
     }).toThrow(notNumber);
   });
+
+  test('checkLength 메서드 테스트 : 인풋 값이 3을 초과하거나 미만인 경우 예외처리한다.', () => {
+    const validator = new Validator();
+    const inputs = ['1', '1234'];
+    const { count } = INVALID_INPUT_MESSAGE;
+
+    expect(() => {
+      inputs.forEach((input) => {
+        validator.checkLength(input);
+      });
+    }).toThrow(count);
+  });
 });
