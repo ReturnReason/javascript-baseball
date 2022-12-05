@@ -3,9 +3,18 @@ const { LENGTH, COMMAND } = require('../constant/baseball');
 
 class Validator {
   validCheckBundle(input) {
+    this.checkRange(input);
     this.checkNumber(input);
     this.checkLength(input);
     this.checkDuplication(input);
+  }
+
+  checkRange(input) {
+    const { outOfRange } = INVALID_INPUT_MESSAGE;
+    if (input.includes(0)) {
+      throw outOfRange;
+    }
+    return true;
   }
 
   checkNumber(input) {
