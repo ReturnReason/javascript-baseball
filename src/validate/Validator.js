@@ -46,7 +46,7 @@ class Validator {
   checkCommand(input) {
     const { restart, quit } = COMMAND;
     const { invalidCommand } = INVALID_INPUT_MESSAGE;
-    if (!input === restart && !input === quit) {
+    if (!(input === restart) && !(input === quit)) {
       throw invalidCommand;
     }
     return true;
